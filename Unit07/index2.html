@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p>Thẻ p Ahihi</p>
+	<button id="btn1">Change Color</button>
+
+	<h1>Thẻ h1 hover</h1>
+
+	<input type="text" id="inputText">
+	<script>
+
+		var h1 = document.getElementsByTagName("h1")[0];
+		h1.addEventListener("mouseover", function(){
+			h1.style.color = "blue";
+		});
+		h1.addEventListener("mouseout", function(){
+			h1.style.color = "black";
+		});
+
+        var inputText = document.getElementById("inputText");
+        inputText.addEventListener("blur", function(){
+        	inputText.style.backgroundColor = "red";
+        })
+
+        inputText.addEventListener("focus", function(){
+        	inputText.style.backgroundColor = "yellow";
+        })
+
+		
+
+	</script>
+</body>
+</html>

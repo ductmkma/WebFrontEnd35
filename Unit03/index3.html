@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div > p {
+			color:red;
+		}
+		div ~ p {
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p>Thẻ p trong div</p>
+	</div>
+	<p>Thẻ p sau thẻ div 1</p>
+	<p>Thẻ p sau thẻ div 2</p>
+
+	<div>
+		<span>
+			<p>Thẻ p trong div 2</p>
+		</span>
+	</div>
+</body>
+</html>

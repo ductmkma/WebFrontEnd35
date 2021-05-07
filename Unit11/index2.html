@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<p>Thẻ p</p>
+
+	<button>Thêm đoạn text</button>
+	<div>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			$("p").on("click", function(){
+				// thực hiện khi click vào p
+				$(this).css({"color": "red"});
+			})
+
+			$("button").on('click', function(){
+				$('div').append("<p class='test'>Thẻ p</p>");
+			})
+
+			// $(".test").on('click', function(){
+			// 	alert("Đã click thành công thẻ p");
+			// })
+
+			$("div").on('click','.test', function(){
+				alert("Đã click thành công thẻ p");
+			})
+
+
+		})
+	</script>
+</body>
+</html>

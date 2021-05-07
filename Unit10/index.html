@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	
+	</style>
+</head>
+<body>
+	<div>
+		<button class="btn">Tab 1</button>
+		<p class="content">
+			Tab 1 Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Fugiat, officiis.
+		</p>
+	</div>
+	<div>
+		<button class="btn">Tab 2</button>
+		<p class="content">
+			Tab 2Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Fugiat, officiis.
+		</p>
+	</div>
+	<div>
+		<button class="btn">Tab 3</button>
+		<p class="content">
+			Tab 2Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Fugiat, officiis.
+		</p>
+	</div>
+	<div>
+		<button class="btn">Tab 3</button>
+		<p class="content">
+			Tab 2Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Fugiat, officiis.
+		</p>
+	</div>
+	<div>
+		<button class="btn">Tab 3</button>
+		<p class="content">
+			Tab 2Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Fugiat, officiis.
+		</p>
+	</div>
+	<div>
+		<button class="btn">Tab 3</button>
+		<p class="content">
+			Tab 2Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Fugiat, officiis.
+		</p>
+	</div>
+
+	<input type="checkbox"> A
+	<input type="checkbox"> B
+	<input type="checkbox"> C
+	<input type="checkbox"> D
+
+	<button id="checkAll">Check all</button>
+	<button id="uncheckAll">UnCheck all</button>
+
+	<p id="text">Thay đổi kích thước</p>
+	<button id="big">Lớn</button>
+	<button id="small">Nhỏ</button>
+	<script>
+	  var text = document.getElementById("text");
+	  var fontSize = 0;
+	  document.getElementById("big").addEventListener("click", function(){
+	  		fontSize += 40;
+	  		text.style.fontSize = (fontSize+40) + "%";
+	  })
+
+		var btns = document.getElementsByClassName("btn");
+		var contents = document.getElementsByClassName("content");
+
+		for(var i = 0; i < btns.length; i ++){
+			btns[i].addEventListener("click", function(){
+				for(var j = 0; j <  contents.length; j++){
+					contents[j].style.display = 'none';
+				}
+				this.nextElementSibling.style.display = "block";
+			})
+		}
+
+		var checkAll = document.getElementById("checkAll");
+		var input = document.getElementsByTagName("input");
+		checkAll.addEventListener("click", function(){
+			for(var k = 0; k < input.length; k++){
+				input[k].checked = true;
+			}
+		})
+
+		var uncheckAll = document.getElementById("uncheckAll");
+		var input = document.getElementsByTagName("input");
+		uncheckAll.addEventListener("click", function(){
+			for(var k = 0; k < input.length; k++){
+				input[k].checked = false;
+			}
+		})
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

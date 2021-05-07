@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.error{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	Họ tên
+	<input type="text" id="name" placeholder="Họ và tên">
+	<span class="error"></span>
+	<br>
+	Email
+	<input type="email" id="email" placeholder="Email">
+	<span class="error"></span>
+	<br>
+	Số điện thoại
+	<input type="number" id="phone" placeholder="SDT">
+	<span class="error"></span>
+	<br>
+	<button>Đăng ký</button>
+	<script>
+		var btn = document.getElementsByTagName("button")[0];
+		var error = document.getElementsByClassName("error");
+		btn.addEventListener("click", function(){
+			var name = document.getElementById("name");
+			if(name.value.length == 0){
+				error[0].innerHTML = "Họ tên không được để trống !";
+			}else{
+				error[0].innerHTML = "";
+			}
+			if(name.value.length <=4 && name.value.length > 0){
+				error[0].innerHTML = "Họ tên > 4 kí tự!";
+			}else{
+				error[0].innerHTML = "";
+			}
+		})
+	</script>
+</body>
+</html>

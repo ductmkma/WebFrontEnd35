@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<p id="test1">Thẻ p thứ 1</p>
+	<p class="test2">Thẻ p thứ 2</p>
+	<p class="test2">Thẻ p thứ 3</p>
+
+	<p id="test4">Đây là thẻ thứ 4</p>
+
+	<input id="test5" type="text">
+
+	<p id="test6">12121212</p>
+
+	<script>
+		var test4 = document.getElementById("test4");
+		console.log(test4.innerHTML);
+		test4.innerHTML = "Thay đổi test 4";
+
+		var test5 = document.getElementById("test5");
+		console.log(test5.type);
+		test5.type = "password";
+
+		var test6 = document.getElementById("test6");
+		test6.style.color = "red";
+		test6.style.fontSize = "20px";
+		console.log(test6.style.fontSize);
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
