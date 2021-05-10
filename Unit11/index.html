@@ -1,46 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<style>
-		.red{
-			color: red;
-		}
-	</style>
-</head>
-<body>
-	<h1 id="test" class="test1">Hôm nay covid phải học online huhu</h1>
-	<h2 id="test2">Đây là thẻ h2</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="test" class="test1">Hôm nay covid phải học online huhu</h1>
+    <h2 id="test2">Đây là thẻ h2</h2>
 
-	<input type="text" id="test3" value="ABC">
-	<p>Đây là thẻ p</p>
+    <input type="text" id="test3" value="ABC" />
+    <p>Đây là thẻ p</p>
 
-	<h5>Đây là thẻ H5 - REMOVE</h5>
-	<h6>Đây là thẻ H6 - Empty</h6>
+    <h5>Đây là thẻ H5 - REMOVE</h5>
+    <h6>Đây là thẻ H6 - Empty</h6>
 
-	<b>Đây là thẻ b</b>
+    <b>Đây là thẻ b</b>
 
-	<script>
-		$(document).ready(function(){
+    <script>
+      $(document).ready(function () {
+        $("h5").remove();
+        $("h6").empty();
 
-			$("h5").remove();
-			$("h6").empty();
+        $("p").prepend("A hihi");
+        $("#test2").before("A hihi");
 
-			$("p").prepend("A hihi");
-			$("#test2").before("A hihi");
-			
-			$("p").append("A hihi");
-			$("#test2").after("A hihi");
+        $("p").append("A hihi");
+        $("#test2").after("A hihi");
 
-			$("b").addClass("red");
-			$("b").removeClass("red");
-
-		})
-	</script>
-</body>
+        $("b").addClass("red");
+        $("b").removeClass("red");
+      });
+    </script>
+  </body>
 </html>
-
-
